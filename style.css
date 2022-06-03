@@ -1,0 +1,84 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow:auto;
+  background-color: #072247;
+}
+
+.hero {
+  max-width: 70vw;
+  max-height: 50vh;
+}
+
+.subtitle {
+  width: 60%;
+}
+
+.feature-icon {
+  border-radius: 1.35rem;
+}
+
+.form-check {
+  padding: 0.25rem 1rem;
+  margin-bottom: 0;
+}
+
+.form-check .form-check-input {
+  margin: 0.25rem 0.5rem 0 0;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  font-family: "Comfortaa";
+  padding-top: 1rem;
+}
+
+.dropdown-menu {
+  max-height: 280px;
+  overflow-y: auto;
+  min-width: 15rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.user-card{
+  transition: all 0.25s ease;
+}
+
+.icon{
+  visibility: hidden;
+}
+
+.card-list::after{
+  content: "";
+  flex: auto;
+}
+
+.profile-photo {
+  transition: all 0.5s ease;
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+  background-color: #D9D9D9;
+  background-size: contain;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.profile-photo:hover {
+  box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 30%);
+}
+
+@media screen and (max-width: 992px) {
+  .subtitle {
+    width: 100%;
+  }
+  .dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+    min-width: 100%;
+}
+}

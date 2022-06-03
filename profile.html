@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MentorShip - Virtual Mentoring Matching for your Tech Career</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+  <link href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet">
+  <link href="themestrapp.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MentorShip</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse dual-collapse2" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Mentors</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse dual-collapse2" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Settings
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" id="settings" aria-labelledby="navbarDropdown"
+              style="min-width: auto;">
+              <li><a class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="top"
+                  title="Will also remove favorites">Get New Users</a></li>
+              <li><a class="dropdown-item" href="#">Reset Favorite</a></li>
+              <li><a class="dropdown-item" href="#">Reset Profile Data</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid d-flex flex-grow-1 flex-column py-lg-5 px-5 py-2 bg-dark text-light">
+    <div class="row px-lg-5 pt-lg-5 px-2 pt-2">
+      <div class="col-12 py-2 py-lg-5">
+        <h1>Your Profile</h1>
+      </div>
+      <div class="col-lg-3 col-12 d-flex justify-content-center">
+        <label class="profile-photo d-flex justify-content-center align-items-center display-data">
+          <i class="fa-regular fa-file-arrow-up icon"></i>
+          <input type="file" name="image" id="image" style="display:none;" />
+        </label>
+      </div>
+      <div class="col-lg-9 col-12 d-flex align-items-center" id="profile">
+        <ul class="list-group list-group-flush d-flex flex-grow-1">
+          <li class="list-group-item d-inline-flex align-items-center bg-dark text-light">
+            <div class="display-data">
+              <i class="fa-solid fa-user-hair pe-2"></i>
+              <span class="field" id="username"></span>
+              <i class="fa-regular fa-pen-to-square px-2 icon"></i>
+            </div>
+            <div class="input-group d-none">
+              <input type="text" class="form-control form-control-sm" placeholder="Enter your name...">
+              <button class="btn btn-sm btn-outline-secondary" type="button" id="button-addon2">Save</button>
+            </div </li>
+          <li class="list-group-item d-inline-flex align-items-center bg-dark text-light">
+            <div class="display-data">
+              <i class="fa-solid fa-briefcase pe-2"></i>
+              <span class="field" id="useroccupation"></span>
+              <i class="fa-regular fa-pen-to-square px-2 icon"></i>
+            </div>
+            <div class="input-group d-none">
+              <input type="text" class="form-control form-control-sm" placeholder="Enter your occupation...">
+              <button class="btn btn-sm btn-outline-secondary" type="button" id="button-addon2">Save</button>
+            </div </li>
+          <li class="list-group-item d-inline-flex align-items-center bg-dark text-light">
+            <div class="display-data">
+              <i class="fa-solid fa-flag pe-2"></i>
+              <span class="field" id="usercountry"></span>
+              <i class="fa-regular fa-pen-to-square px-2 icon"></i>
+            </div>
+            <div class="input-group d-none">
+              <input type="text" class="form-control form-control-sm" placeholder="Enter your country...">
+              <button class="btn btn-sm btn-outline-secondary" type="button" id="button-addon2">Save</button>
+            </div </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row px-lg-5 px-2 pt-5 d-flex justify-content-center">
+      <div class="col-12 py-2 py-lg-5">
+        <h3>Saved Mentors</h3>
+      </div>
+      <div class="card-list d-flex flex-wrap px-lg-5 px-2 text-dark" style="max-width: 80rem;">
+        <div class="w-100 d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lg fade" id="userInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">About Jimmy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card modal-card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4 col-12" style="overflow: hidden">
+                <img id="modalImg"
+                  src="https://res.cloudinary.com/dxdhkhw26/image/upload/c_fill,h_360,w_360,q_100/v1653223606/userphoto/male-99.jpg"
+                  class="img-fluid rounded position-relative top-50 start-50 translate-middle" alt="A profile photo.">
+              </div>
+              <div class="col-md-8 col-12">
+                <div class="card-body" id="modalCard">
+                  <h5 class="card-title">Guillaume Vincent <i class="em em-flag-au" aria-role="presentation"
+                      aria-label="Australia Flag"></i></h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0" <i class="fa-solid fa-envelope pe-2">
+                      </i>>guillaume.vincent@example.com</li>
+                    <li class="list-group-item px-0"><i class="fa-solid fa-briefcase pe-2"></i>Software Engineer</li>
+                    <li class="list-group-item px-0"><i class="fa-solid fa-clock-two pe-2"></i>Atlantic Time (Canada),
+                      Caracas, La Paz (UTC-4)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid pb-3">
+          <div class="row">
+            <div class="col-6"><button type="button" class="btn btn-primary w-100" id="contact" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="guillaume.vincent@example.com">Contact</button></div>
+            <div class="col-6"><button type="button" class="btn btn-secondary w-100" id="modalFav">Save</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container text-light">
+    <footer class="py-3 my-4">
+      <p class="text-center text-muted">This is not a real service. All information provided on this site is for
+        demonstrative purposes only.</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="profile.js"></script>
+</body>
+
+</html>
