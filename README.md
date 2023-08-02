@@ -6,4 +6,4 @@ MentorShip mimics an ADPList-style mentorship platform, where a list of fictiona
 
 # See it in action
 
-See it in action on [Replit](https://mentorship-list--jc102.repl.co/search.html).
+See it in action on [Replit](https://mentorship-list--jc102.repl.co/).
