@@ -4,4 +4,4 @@ Mentorship is a front-end assignment that I did for AlphaCamp, a front-end devel
 
 # See it in action
 
-See it in action on [Replit](https://replit.com/@JC102/Mentorship-List)
+See it in action on [Replit](https://mentorship-list--jc102.repl.co/search.html).
