@@ -1,4 +1,4 @@
-# mentorship
+# Mentorship
 
 Mentorship is a front-end assignment that I did for AlphaCamp, a front-end development bootcamp.
 
