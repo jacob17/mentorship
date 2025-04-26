@@ -6,4 +6,4 @@ MentorShip mimics an ADPList-style mentorship platform, where a list of fictiona
 
 # See it in action
 
-See it in action [here](https://jacobchen-frontend-demo.netlify.app).h
+See it in action [here](https://jacobchen-frontend-demo.netlify.app).
